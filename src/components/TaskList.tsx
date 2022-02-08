@@ -16,9 +16,13 @@ export function TaskList() {
 
   function handleCreateNewTask() {
 
+    const taskTitle = newTaskTitle.trim()
+
+    if(!taskTitle.trim()) return;
+
     const task = {
       id: new Date().getTime(),
-      title: newTaskTitle.trim(),
+      title: taskTitle,
       isComplete: false
     }
 
